@@ -1,10 +1,10 @@
 {
-  "name": "bulma-calendar",
+  "name": "bulma-1-calendar",
   "description": "Display a calendar for date/time selection, in different colors and sizes",
   "main": "dist/js/bulma-calendar.js",
   "style": "dist/css/bulma-calendar.min.css",
   "sass": "src/sass/index.sass",
-  "version": "6.1.17",
+  "version": "7.0.0",
   "scripts": {
     "commit": "git-cz",
     "travis-deploy-once": "travis-deploy-once",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Wikiki/bulma-calendar.git"
+    "url": "https://github.com/xEsk/bulma-calendar.git"
   },
   "keywords": [
     "Bulma",
@@ -39,7 +39,7 @@
     "date-fns": "^2.21.3"
   },
   "peerDependencies": {
-    "bulma": "^0.9.3"
+    "bulma": "^1.0.1"
   },
   "devDependencies": {
     "ansi-colors": "^2.0.1",
