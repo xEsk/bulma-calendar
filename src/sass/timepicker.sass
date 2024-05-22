@@ -127,10 +127,9 @@
             font-size: 1.5rem
             color: $primary
 
-
     @each $name, $pair in $colors
         $color: nth($pair, 1)
-        $color-invert: nth($pair, 2)
+        $color-invert: if(length($pair) > 1, nth($pair, 2), #fff) // default to white if invert color is missing
         &.is-#{$name}
             .timepicker-input,
             .timepicker-input-number,

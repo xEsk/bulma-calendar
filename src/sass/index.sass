@@ -1,3 +1,4 @@
+@import "bulma/sass/utilities/derived-variables"
 @import "bulma/sass/utilities/functions"
 @import "bulma/sass/form/shared"
 
@@ -478,7 +479,7 @@ $calendar-date-padding: .1rem 0 !default
             white-space: nowrap
             @each $name, $pair in $colors
                 $color: nth($pair, 1)
-                $color-invert: nth($pair, 2)
+                $color-invert: if(length($pair) > 1, nth($pair, 2), #fff) // default to white if invert color is missing
                 &.is-#{$name}
                     background-color: $color
                     color: $color-invert
@@ -494,7 +495,7 @@ $calendar-date-padding: .1rem 0 !default
 
     @each $name, $pair in $colors
         $color: nth($pair, 1)
-        $color-invert: nth($pair, 2)
+        $color-invert: if(length($pair) > 1, nth($pair, 2), #fff) // default to white if invert color is missing
         &.is-#{$name}
             .datetimepicker-header
                 .datetimepicker-selection-day
@@ -680,7 +681,7 @@ $calendar-date-padding: .1rem 0 !default
                 &:active,
                 &.is-active
                     border-color: $color
-                    box-shadow: $input-focus-box-shadow-size rgba($color, 0.25)
+                    box-shadow: $input-focus-shadow-size rgba($color, 0.25)
 
             .datetimepicker-clear-button
                 color: $color
